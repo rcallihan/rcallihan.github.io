@@ -1,4 +1,4 @@
-title:            Ryan Callihan
+title:            RC
 description:      A place for my stuff
 # Your site's domain goes here. Leave localhost server or blank when working locally.
 #url:              http://localhost:4000
@@ -6,12 +6,12 @@ url:              http://rcallihan.github.io
 disqus_shortname:
 
 #image:
-#  feature: ryan_in_trees_2.jpg
+# feature: ryan_in_trees_2.jpg
 
 # Owner/author information
 owner:
   name:           Ryan Callihan
-  avatar:         callihan_r06-2.jpg
+  avatar:         callihan_face.jpg
   bio:            GIS, maps, data
   email:          rcallihan1@gmail.com
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
@@ -43,7 +43,7 @@ bing_verify:
 links:
   - title: Posts
     url: /posts/
-  - title: About
+  - title: About Me
     url: /about/  
 #  - title: Theme Setup
 #    url: /theme-setup/
