@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+<title type="text">Ryan Callihan</title>
+<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
+<link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
+<link rel="alternate" type="text/html" href="http://localhost:4000" />
+<updated>2014-06-09T13:20:03-07:00</updated>
+<id>http://localhost:4000/</id>
+<author>
+  <name>Ryan Callihan</name>
+  <uri>http://localhost:4000/</uri>
+  <email>rcallihan1@gmail.com</email>
+</author>
+
+
+<entry>
+  <title type="html"><![CDATA[Mapping Moves data, Part I]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/%5B%22web%20mapping%22%5D/export-moves-data-and-map-it/" />
+  <id>http://localhost:4000/%5B%22web%20mapping%22%5D/export-moves-data-and-map-it</id>
+  <updated>2014-06-04 13:32:08 -0700T00:00:00-00:00</updated>
+  <published>2014-06-04T00:00:00-07:00</published>
+  
+  <author>
+    <name>Ryan Callihan</name>
+    <uri>http://localhost:4000</uri>
+    <email>rcallihan1@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;An approach on mapping activity from the Moves app&lt;/p&gt;
+
+&lt;h3 id=&quot;why-i-use-the-moves-app&quot;&gt;Why I use the Moves app&lt;/h3&gt;
+
+&lt;p&gt;Why? After moving to a new city (Portland, Or) and spending a considerable effort exploring the seemingly endless venues/coffee shops/restraunts/bars/parks, I realized I didn’t have a good record of where I’ve been. On top of that, I’m biking, walking, and running like never before, so why not track that too? Simply, I wanted a way to easily both log the places I’ve been and how I got there. I’m an android user and after testing several far-too-feature-packed options, I settled on Moves. &lt;/p&gt;
+
+&lt;h4 id=&quot;perks-of-the-moves-app&quot;&gt;Perks of the Moves app&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;Simple and fanastic UI&lt;/li&gt;
+  &lt;li&gt;It uses the Foursquare API to easily log your place&lt;/li&gt;
+  &lt;li&gt;Detects the type of your movement (ie biking, running, walking) &lt;/li&gt;
+  &lt;li&gt;And finally, it now has a native tool to &lt;a href=&quot;https://accounts.moves-app.com/signin/export&quot;&gt;export&lt;/a&gt; your data in several formats (JSON, CSV, KML, GPX and ICS)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Basically, Moves is a great location tracking app disguised as a fitness tracker. &lt;/p&gt;
+
+&lt;p class=&quot;notice&quot;&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; In April, &lt;a href=&quot;http://techcrunch.com/2014/04/24/facebook-acquires-activity-tracking-app-moves/&quot;&gt;Facebook bought the Moves app&lt;/a&gt;. Moves &lt;a href=&quot;http://www.theverge.com/2014/5/6/5688334/moves-app-will-share-user-data-with-facebook&quot;&gt;does share your data with Facebook&lt;/a&gt;, so that’s something to consider. If you’re an Android user, Google &lt;a href=&quot;http://www.babble.com/tech/creepy-cool-google-location-history-mapping-your-every-move/&quot;&gt;does this already&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;mapbox--tilemill&quot;&gt;Mapbox &amp;amp; Tilemill&lt;/h3&gt;
+
+&lt;p&gt;The combination of Tilemill and Mapbox is one of the easiest ways to style and display your spatial data on the web. Coincidently, &lt;a href=&quot;https://twitter.com/heyitsgarrett&quot;&gt;Garret Miller&lt;/a&gt; at &lt;a href=&quot;https://www.mapbox.com/&quot;&gt;Mapbox&lt;/a&gt; made a &lt;a href=&quot;https://www.mapbox.com/blog/mapping-moves/&quot;&gt;really nice tutorial&lt;/a&gt; on how to export your Moves data, style it in &lt;a href=&quot;https://www.mapbox.com/tilemill/&quot;&gt;Tilemill&lt;/a&gt; and add a basemap through &lt;a href=&quot;https://www.mapbox.com&quot;&gt;Mapbox&lt;/a&gt; and publish your map online. I’ve chosen the Tilemill/Mapbox method mostly because I love Mapbox but also because they provide a really handy &lt;a href=&quot;https://github.com/mapbox/togeojson&quot;&gt;GPX to GeoJSON tool.&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;my-moves&quot;&gt;My Moves&lt;/h3&gt;
+
+&lt;iframe width=&quot;100%&quot; height=&quot;500px&quot; frameborder=&quot;0&quot; src=&quot;http://a.tiles.mapbox.com/v3/rcallihan.iedo4jhh/attribution,zoompan,zoomwheel,geocoder,share.html&quot;&gt;&lt;/iframe&gt;
+
+&lt;h3 id=&quot;adding-a-legend-in-tilemill&quot;&gt;Adding a Legend in TileMill&lt;/h3&gt;
+&lt;p&gt;A map of this nature is pretty useless without a legend. &lt;/p&gt;
+
+&lt;h3 id=&quot;next-posts&quot;&gt;Next posts&lt;/h3&gt;
+
+&lt;p&gt;I really haven’t done much here that wasn’t already described in Garret Miller’s &lt;a href=&quot;https://twitter.com/heyitsgarrett&quot;&gt;post&lt;/a&gt;, but in the next couple of posts I plan to accomplish a few extra things:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Map places locations&lt;/li&gt;
+  &lt;li&gt;Show some strategies for cleaning up the Moves Polyline data&lt;/li&gt;
+&lt;/ul&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/%5B%22web%20mapping%22%5D/export-moves-data-and-map-it/&quot;&gt;Mapping Moves data, Part I&lt;/a&gt; was originally published by Ryan Callihan at &lt;a href=&quot;http://localhost:4000&quot;&gt;Ryan Callihan&lt;/a&gt; on June 04, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Hello World!]]></title>
+  <link rel="alternate" type="text/html" href="http://localhost:4000/%5B%22geography%22%5D/test-post/" />
+  <id>http://localhost:4000/%5B%22geography%22%5D/test-post</id>
+  <updated>2014-05-31 16:37:21 -0700T00:00:00-00:00</updated>
+  <published>2014-05-31T00:00:00-07:00</published>
+  
+  <author>
+    <name>Ryan Callihan</name>
+    <uri>http://localhost:4000</uri>
+    <email>rcallihan1@gmail.com</email>
+  </author>
+  <content type="html">&lt;h3 id=&quot;the-why&quot;&gt;The why&lt;/h3&gt;
+
+&lt;p&gt;I’m exploring the world of GIS development, data analysis, and web mapping through mostly an open-source lens. In an attempt to pay it forward, I’d like to share my experiences and lessons those interested.   &lt;/p&gt;
+
+&lt;h3 id=&quot;potential-topics&quot;&gt;Potential topics&lt;/h3&gt;
+
+&lt;p&gt;While keeping to a concise topic is ideal, it’s rare these days, for me at least, to follow any one blog/site because of a particular theme. Instead, we stumble (or tumble) on onto blog/help sites because of a particular issue or topic we’ve been googling. With this in mind, I will try to stay on topic, but will have no qualms writing about some esoteric subject I think may help some desperate googling soul out there. Mainly, topics will include: &lt;strong&gt;GIS, spatial analysis, open source web mapping, remote sensing/image processing, and environmental science.&lt;/strong&gt;     &lt;/p&gt;
+
+&lt;h3 id=&quot;the-site&quot;&gt;The site&lt;/h3&gt;
+
+&lt;p&gt;The site is built on &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; using a slightly deviated version of the &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;Minimal Mistakes&lt;/a&gt; theme. For anyone curious about Jekyll, in my experience so far, it’s very easy to setup, customize, and create content. It seems like a good middle ground for anyone who knows a few things about the web but would rather spend their time creating content than developing a site. &lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/%5B%22geography%22%5D/test-post/&quot;&gt;Hello World!&lt;/a&gt; was originally published by Ryan Callihan at &lt;a href=&quot;http://localhost:4000&quot;&gt;Ryan Callihan&lt;/a&gt; on May 31, 2014.&lt;/p&gt;</content>
+</entry>
+
+</feed>

@@ -1,0 +1,222 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Mapping Moves data, Part I &#8211; Ryan Callihan</title>
+<meta name="description" content="">
+<meta name="keywords" content="location, web mapping, moves app">
+<!-- Twitter Cards -->
+	
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:image" content=
+			
+				
+						"http://localhost:4000/images/"
+				
+			
+		>
+	
+	<meta name="twitter:title" content="Mapping Moves data, Part I">
+	<meta name="twitter:description" content="A place for my stuff">
+	<meta name="twitter:creator" content="@ryan_callihan">
+
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mapping Moves data, Part I">
+<meta property="og:description" content="A place for my stuff">
+<meta property="og:url" content="http://localhost:4000/%5B%22web%20mapping%22%5D/export-moves-data-and-map-it/">
+<meta property="og:site_name" content="Ryan Callihan">
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/%5B%22web%20mapping%22%5D/export-moves-data-and-map-it/">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Ryan Callihan Feed">
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Webfonts -->
+<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.min.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="http://localhost:4000">Ryan Callihan</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		    <ul>
+		        
+				<li><a href="http://localhost:4000/posts/" >Posts</a></li>
+		        
+				<li><a href="/about/" target="_blank">About</a></li>
+		        
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+	<img src="http://localhost:4000/images/callihan_r06-2.jpg" class="bio-photo" alt="Ryan Callihan bio photo"></a>
+
+<h3>Ryan Callihan</h3>
+<p>GIS, maps, data</p>
+<a href="http://twitter.com/ryan_callihan" class="author-social" target="_blank"><i class="icon-twitter"></i> Twitter</a>
+
+
+<a href="http://linkedin.com/in/ryancallihan" class="author-social" target="_blank"><i class="icon-linkedin"></i> LinkedIn</a>
+<a href="http://instagram.com/rcallihan1" class="author-social" target="_blank"><i class="icon-instagram"></i> Instagram</a>
+
+<a href="http://github.com/rcallihan" class="author-social" target="_blank"><i class="icon-github"></i> Github</a>
+
+
+
+
+
+
+  </div>
+  <article>
+    <div class="headline-wrap">
+      
+        <h1><a href="http://localhost:4000/%5B%22web%20mapping%22%5D/export-moves-data-and-map-it/" rel="bookmark" title="Mapping Moves data, Part I">Mapping Moves data, Part I</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p>An approach on mapping activity from the Moves app</p>
+
+<h3 id="why-i-use-the-moves-app">Why I use the Moves app</h3>
+
+<p>Why? After moving to a new city (Portland, Or) and spending a considerable effort exploring the seemingly endless venues/coffee shops/restraunts/bars/parks, I realized I didn’t have a good record of where I’ve been. On top of that, I’m biking, walking, and running like never before, so why not track that too? Simply, I wanted a way to easily both log the places I’ve been and how I got there. I’m an android user and after testing several far-too-feature-packed options, I settled on Moves. </p>
+
+<h4 id="perks-of-the-moves-app">Perks of the Moves app</h4>
+<ul>
+  <li>Simple and fanastic UI</li>
+  <li>It uses the Foursquare API to easily log your place</li>
+  <li>Detects the type of your movement (ie biking, running, walking) </li>
+  <li>And finally, it now has a native tool to <a href="https://accounts.moves-app.com/signin/export">export</a> your data in several formats (JSON, CSV, KML, GPX and ICS)</li>
+</ul>
+
+<p>Basically, Moves is a great location tracking app disguised as a fitness tracker. </p>
+
+<p class="notice"><strong>Disclaimer:</strong> In April, <a href="http://techcrunch.com/2014/04/24/facebook-acquires-activity-tracking-app-moves/">Facebook bought the Moves app</a>. Moves <a href="http://www.theverge.com/2014/5/6/5688334/moves-app-will-share-user-data-with-facebook">does share your data with Facebook</a>, so that’s something to consider. If you’re an Android user, Google <a href="http://www.babble.com/tech/creepy-cool-google-location-history-mapping-your-every-move/">does this already</a>.</p>
+
+<h3 id="mapbox--tilemill">Mapbox &amp; Tilemill</h3>
+
+<p>The combination of Tilemill and Mapbox is one of the easiest ways to style and display your spatial data on the web. Coincidently, <a href="https://twitter.com/heyitsgarrett">Garret Miller</a> at <a href="https://www.mapbox.com/">Mapbox</a> made a <a href="https://www.mapbox.com/blog/mapping-moves/">really nice tutorial</a> on how to export your Moves data, style it in <a href="https://www.mapbox.com/tilemill/">Tilemill</a> and add a basemap through <a href="https://www.mapbox.com">Mapbox</a> and publish your map online. I’ve chosen the Tilemill/Mapbox method mostly because I love Mapbox but also because they provide a really handy <a href="https://github.com/mapbox/togeojson">GPX to GeoJSON tool.</a></p>
+
+<h3 id="my-moves">My Moves</h3>
+
+<iframe width="100%" height="500px" frameborder="0" src="http://a.tiles.mapbox.com/v3/rcallihan.iedo4jhh/attribution,zoompan,zoomwheel,geocoder,share.html"></iframe>
+
+<h3 id="adding-a-legend-in-tilemill">Adding a Legend in TileMill</h3>
+<p>A map of this nature is pretty useless without a legend. </p>
+
+<h3 id="next-posts">Next posts</h3>
+
+<p>I really haven’t done much here that wasn’t already described in Garret Miller’s <a href="https://twitter.com/heyitsgarrett">post</a>, but in the next couple of posts I plan to accomplish a few extra things:</p>
+
+<ul>
+  <li>Map places locations</li>
+  <li>Show some strategies for cleaning up the Moves Polyline data</li>
+</ul>
+
+
+      <hr />
+      <footer role="contentinfo">
+        <div class="article-author-bottom">
+          
+	<img src="http://localhost:4000/images/callihan_r06-2.jpg" class="bio-photo" alt="Ryan Callihan bio photo"></a>
+
+<h3>Ryan Callihan</h3>
+<p>GIS, maps, data</p>
+<a href="http://twitter.com/ryan_callihan" class="author-social" target="_blank"><i class="icon-twitter"></i> Twitter</a>
+
+
+<a href="http://linkedin.com/in/ryancallihan" class="author-social" target="_blank"><i class="icon-linkedin"></i> LinkedIn</a>
+<a href="http://instagram.com/rcallihan1" class="author-social" target="_blank"><i class="icon-instagram"></i> Instagram</a>
+
+<a href="http://github.com/rcallihan" class="author-social" target="_blank"><i class="icon-github"></i> Github</a>
+
+
+
+
+
+
+        </div>
+        <p class="byline"><strong>Mapping Moves data, Part I</strong> was published on <time datetime="2014-06-04T00:00:00-07:00">June 04, 2014</time> and last modified on <time datetime="2014-06-04">June 04, 2014</time> by <a href="http://localhost:4000/about" title="About Ryan Callihan">Ryan Callihan</a>.</p>
+      </footer>
+    </div><!-- /.article-wrap -->
+  
+  </article>
+</div><!-- /#main -->
+
+<div class="footer-wrap">
+  <div class="related-articles">
+  <h4>You might also enjoy <small class="pull-right">(<a href="http://localhost:4000/posts/">View all posts</a>)</small></h4>
+    <ul>
+    
+      <li><a href="http://localhost:4000/%5B%22geography%22%5D/test-post/" title="Hello World!">Hello World!</a></li>
+    
+    </ul>
+    <hr />
+  </div><!-- /.related-articles -->
+  <footer>
+    <span>&copy; 2014 Ryan Callihan. Powered by <a href="http://jekyllrb.com">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/">Minimal Mistakes</a> theme.</span>
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+	        
+
+</body>
+</html>
