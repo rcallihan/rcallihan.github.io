@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-<title type="text">Ryan Callihan</title>
+<title type="text">RC</title>
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml" />
 <link rel="alternate" type="text/html" href="http://localhost:4000" />
-<updated>2014-06-09T16:49:24-07:00</updated>
+<updated>2014-06-10T11:20:18-07:00</updated>
 <id>http://localhost:4000/</id>
 <author>
   <name>Ryan Callihan</name>
@@ -41,6 +41,12 @@
 
 &lt;p&gt;Basically, Moves is a great location tracking app disguised as a fitness tracker. &lt;/p&gt;
 
+&lt;figure class=&quot;half&quot;&gt;
+    &lt;a href=&quot;/images/Screenshot_2014-06-04-14-13-27.png&quot;&gt;&lt;img src=&quot;/images/Screenshot_2014-06-04-14-13-27_small.png&quot; /&gt;&lt;/a&gt;
+    &lt;a href=&quot;/images/Screenshot_2014-06-04-14-14-17.png&quot;&gt;&lt;img src=&quot;/images/Screenshot_2014-06-04-14-14-17_small.png&quot; /&gt;&lt;/a&gt;
+    &lt;figcaption&gt;Example &quot;storyline&quot; mode and map mode from the Moves App&lt;/figcaption&gt;
+&lt;/figure&gt;
+
 &lt;p class=&quot;notice&quot;&gt;&lt;strong&gt;Disclaimer:&lt;/strong&gt; In April, &lt;a href=&quot;http://techcrunch.com/2014/04/24/facebook-acquires-activity-tracking-app-moves/&quot;&gt;Facebook bought the Moves app&lt;/a&gt;. Moves &lt;a href=&quot;http://www.theverge.com/2014/5/6/5688334/moves-app-will-share-user-data-with-facebook&quot;&gt;does share your data with Facebook&lt;/a&gt;, so that’s something to consider. If you’re an Android user, Google &lt;a href=&quot;http://www.babble.com/tech/creepy-cool-google-location-history-mapping-your-every-move/&quot;&gt;does this already&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h3 id=&quot;mapbox--tilemill&quot;&gt;Mapbox &amp;amp; Tilemill&lt;/h3&gt;
@@ -52,19 +58,80 @@
 &lt;iframe width=&quot;100%&quot; height=&quot;500px&quot; frameborder=&quot;0&quot; src=&quot;http://a.tiles.mapbox.com/v3/rcallihan.iedo4jhh/attribution,zoompan,zoomwheel,geocoder,share.html&quot;&gt;&lt;/iframe&gt;
 
 &lt;h3 id=&quot;adding-a-legend-in-tilemill&quot;&gt;Adding a Legend in TileMill&lt;/h3&gt;
-&lt;p&gt;A map of this nature is pretty useless without a legend. &lt;/p&gt;
+&lt;p&gt;A map of this nature is pretty useless without a legend. Using some direction from TileMill, I made this simple legend for my Moves data. To recreate this legend, copy and paste the html and css code below into the Legends tab of the Templates panel in TileMill. &lt;/p&gt;
+
+&lt;p&gt;The legend doesn’t show in an iframe insertion like the map above, but it will show from the version hosted on mapbox. &lt;a href=&quot;https://a.tiles.mapbox.com/v3/rcallihan.iedo4jhh/page.html#13/45.5243/-122.6954&quot;&gt;Click here for my map&lt;/a&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;third&quot;&gt;
+	&lt;img src=&quot;/images/moves_legend.png&quot; /&gt;
+    &lt;img src=&quot;&quot; /&gt;
+    &lt;img src=&quot;&quot; /&gt;
+    
+&lt;/figure&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&#39;my-legend&#39;&amp;gt;
+&amp;lt;div class=&#39;legend-title’&amp;gt;Type of activity&amp;lt;/div&amp;gt;
+&amp;lt;div class=&#39;legend-scale&#39;&amp;gt;
+  &amp;lt;ul class=&#39;legend-labels&#39;&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;span style=&#39;background:#A6E382;&#39;&amp;gt;&amp;lt;/span&amp;gt;Cycling&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;span style=&#39;background:#72C7B9;&#39;&amp;gt;&amp;lt;/span&amp;gt;Walking&amp;lt;/li&amp;gt;
+    &amp;lt;li&amp;gt;&amp;lt;span style=&#39;background:#E86080;&#39;&amp;gt;&amp;lt;/span&amp;gt;Running&amp;lt;/li&amp;gt;
+  &amp;lt;/ul&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;style type=&#39;text/css&#39;&amp;gt;
+  .my-legend .legend-title {
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 95%;
+    }
+  .my-legend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .my-legend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+    }
+  .my-legend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 4px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    margin-top: 7px;
+    border: 1px solid #999;
+    }
+  .my-legend .legend-source {
+    font-size: 70%;
+    color: #999;
+    clear: both;
+    }
+  .my-legend a {
+    color: #777;
+    }
+&amp;lt;/style&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&quot;next-posts&quot;&gt;Next posts&lt;/h3&gt;
 
 &lt;p&gt;I really haven’t done much here that wasn’t already described in Garret Miller’s &lt;a href=&quot;https://twitter.com/heyitsgarrett&quot;&gt;post&lt;/a&gt;, but in the next couple of posts I plan to accomplish a few extra things:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Map places locations&lt;/li&gt;
+  &lt;li&gt;Map place locations&lt;/li&gt;
   &lt;li&gt;Show some strategies for cleaning up the Moves Polyline data&lt;/li&gt;
 &lt;/ul&gt;
 
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/%5B%22web%20mapping%22%5D/export-moves-data-and-map-it/&quot;&gt;Mapping Moves data, Part I&lt;/a&gt; was originally published by Ryan Callihan at &lt;a href=&quot;http://localhost:4000&quot;&gt;Ryan Callihan&lt;/a&gt; on June 04, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/%5B%22web%20mapping%22%5D/export-moves-data-and-map-it/&quot;&gt;Mapping Moves data, Part I&lt;/a&gt; was originally published by Ryan Callihan at &lt;a href=&quot;http://localhost:4000&quot;&gt;RC&lt;/a&gt; on June 04, 2014.&lt;/p&gt;</content>
 </entry>
 
 
@@ -92,7 +159,7 @@
 
 &lt;p&gt;The site is built on &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; using a slightly deviated version of the &lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;Minimal Mistakes&lt;/a&gt; theme. For anyone curious about Jekyll, in my experience so far, it’s very easy to setup, customize, and create content. It seems like a good middle ground for anyone who knows a few things about the web but would rather spend their time creating content than developing a site. &lt;/p&gt;
 
-  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/%5B%22geography%22%5D/test-post/&quot;&gt;Hello World!&lt;/a&gt; was originally published by Ryan Callihan at &lt;a href=&quot;http://localhost:4000&quot;&gt;Ryan Callihan&lt;/a&gt; on May 31, 2014.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;http://localhost:4000/%5B%22geography%22%5D/test-post/&quot;&gt;Hello World!&lt;/a&gt; was originally published by Ryan Callihan at &lt;a href=&quot;http://localhost:4000&quot;&gt;RC&lt;/a&gt; on May 31, 2014.&lt;/p&gt;</content>
 </entry>
 
 </feed>

@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Mapping Moves data, Part I &#8211; Ryan Callihan</title>
+<title>Mapping Moves data, Part I &#8211; RC</title>
 <meta name="description" content="">
 <meta name="keywords" content="location, web mapping, moves app">
 <!-- Twitter Cards -->
@@ -30,14 +30,14 @@
 <meta property="og:title" content="Mapping Moves data, Part I">
 <meta property="og:description" content="A place for my stuff">
 <meta property="og:url" content="http://localhost:4000/%5B%22web%20mapping%22%5D/export-moves-data-and-map-it/">
-<meta property="og:site_name" content="Ryan Callihan">
+<meta property="og:site_name" content="RC">
 
 
 
 
 
 <link rel="canonical" href="http://localhost:4000/%5B%22web%20mapping%22%5D/export-moves-data-and-map-it/">
-<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Ryan Callihan Feed">
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="RC Feed">
 
 
 <!-- http://t.co/dKP3o1e -->
@@ -83,7 +83,7 @@
 
 <div class="navigation-wrapper">
 	<div class="site-name">
-		<a href="http://localhost:4000">Ryan Callihan</a>
+		<a href="http://localhost:4000">RC</a>
 	</div><!-- /.site-name -->
 	<div class="top-navigation">
 		<nav role="navigation" id="site-nav" class="nav">
@@ -91,7 +91,7 @@
 		        
 				<li><a href="http://localhost:4000/posts/" >Posts</a></li>
 		        
-				<li><a href="/about/" target="_blank">About</a></li>
+				<li><a href="/about/" target="_blank">About Me</a></li>
 		        
 		    </ul>
 		</nav>
@@ -144,6 +144,12 @@
 
 <p>Basically, Moves is a great location tracking app disguised as a fitness tracker. </p>
 
+<figure class="half">
+    <a href="/images/Screenshot_2014-06-04-14-13-27.png"><img src="/images/Screenshot_2014-06-04-14-13-27_small.png" /></a>
+    <a href="/images/Screenshot_2014-06-04-14-14-17.png"><img src="/images/Screenshot_2014-06-04-14-14-17_small.png" /></a>
+    <figcaption>Example "storyline" mode and map mode from the Moves App</figcaption>
+</figure>
+
 <p class="notice"><strong>Disclaimer:</strong> In April, <a href="http://techcrunch.com/2014/04/24/facebook-acquires-activity-tracking-app-moves/">Facebook bought the Moves app</a>. Moves <a href="http://www.theverge.com/2014/5/6/5688334/moves-app-will-share-user-data-with-facebook">does share your data with Facebook</a>, so that’s something to consider. If you’re an Android user, Google <a href="http://www.babble.com/tech/creepy-cool-google-location-history-mapping-your-every-move/">does this already</a>.</p>
 
 <h3 id="mapbox--tilemill">Mapbox &amp; Tilemill</h3>
@@ -155,14 +161,75 @@
 <iframe width="100%" height="500px" frameborder="0" src="http://a.tiles.mapbox.com/v3/rcallihan.iedo4jhh/attribution,zoompan,zoomwheel,geocoder,share.html"></iframe>
 
 <h3 id="adding-a-legend-in-tilemill">Adding a Legend in TileMill</h3>
-<p>A map of this nature is pretty useless without a legend. </p>
+<p>A map of this nature is pretty useless without a legend. Using some direction from TileMill, I made this simple legend for my Moves data. To recreate this legend, copy and paste the html and css code below into the Legends tab of the Templates panel in TileMill. </p>
+
+<p>The legend doesn’t show in an iframe insertion like the map above, but it will show from the version hosted on mapbox. <a href="https://a.tiles.mapbox.com/v3/rcallihan.iedo4jhh/page.html#13/45.5243/-122.6954">Click here for my map</a></p>
+
+<figure class="third">
+	<img src="/images/moves_legend.png" />
+    <img src="" />
+    <img src="" />
+    
+</figure>
+
+<pre><code>&lt;div class='my-legend'&gt;
+&lt;div class='legend-title’&gt;Type of activity&lt;/div&gt;
+&lt;div class='legend-scale'&gt;
+  &lt;ul class='legend-labels'&gt;
+    &lt;li&gt;&lt;span style='background:#A6E382;'&gt;&lt;/span&gt;Cycling&lt;/li&gt;
+    &lt;li&gt;&lt;span style='background:#72C7B9;'&gt;&lt;/span&gt;Walking&lt;/li&gt;
+    &lt;li&gt;&lt;span style='background:#E86080;'&gt;&lt;/span&gt;Running&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;style type='text/css'&gt;
+  .my-legend .legend-title {
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 95%;
+    }
+  .my-legend .legend-scale ul {
+    margin: 0;
+    margin-bottom: 5px;
+    padding: 0;
+    float: left;
+    list-style: none;
+    }
+  .my-legend .legend-scale ul li {
+    font-size: 80%;
+    list-style: none;
+    margin-left: 0;
+    line-height: 18px;
+    margin-bottom: 2px;
+    }
+  .my-legend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 4px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 0;
+    margin-top: 7px;
+    border: 1px solid #999;
+    }
+  .my-legend .legend-source {
+    font-size: 70%;
+    color: #999;
+    clear: both;
+    }
+  .my-legend a {
+    color: #777;
+    }
+&lt;/style&gt;
+</code></pre>
 
 <h3 id="next-posts">Next posts</h3>
 
 <p>I really haven’t done much here that wasn’t already described in Garret Miller’s <a href="https://twitter.com/heyitsgarrett">post</a>, but in the next couple of posts I plan to accomplish a few extra things:</p>
 
 <ul>
-  <li>Map places locations</li>
+  <li>Map place locations</li>
   <li>Show some strategies for cleaning up the Moves Polyline data</li>
 </ul>
 
