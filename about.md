@@ -9,7 +9,7 @@ comments: true
 
 ---
 
-Hi, I'm Ryan. I'm a geographer, g, and data nerd living in Portland, Oregon.  I’m exploring the world of GIS development, data analysis, and web mapping through *mostly* an open-source lens. I’d like to share my experiences and lessons to those interested. 
+Hi, I'm Ryan. I'm a geographer, GIS analyst, and data nerd living in Portland, Oregon.  I’m exploring the world of GIS development, data analysis, and web mapping through *mostly* an open-source lens. I’d like to share my experiences and lessons to those interested. 
 
 <figure class="whole">
     <a href="/images/P4170401.jpg"><img src="/images/P4170401.jpg"></a>
