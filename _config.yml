@@ -1,8 +1,8 @@
 title:            RC
 description:      A place for my stuff
 # Your site's domain goes here. Leave localhost server or blank when working locally.
-url:              http://localhost:4000
-#url:              http://rcallihan.github.io
+#url:              http://localhost:4000
+url:              http://rcallihan.github.io
 disqus_shortname:
 
 #image:
